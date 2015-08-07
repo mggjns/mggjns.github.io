@@ -1,0 +1,127 @@
+body {
+  background-color: #f6f6f6;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-font-smoothing: antialiased;
+  width: 95%;
+}
+body .contentwrap {
+  overflow: hidden;
+  text-align: center;
+}
+
+#header {
+  color: #393939;
+  font-family: 'Abel', sans-serif;
+  font-size: 4em;
+  padding: 20px 40px;
+  text-align: left;
+  width: 600px;
+}
+@media (max-width: 981px) {
+  #header {
+    line-height: 50px;
+    width: 400px;
+  }
+}
+#header .role {
+  color: #009933;
+  font-size: 28px;
+}
+
+#list-container {
+  background-color: white;
+  border: solid 1px #dbdbdb;
+  margin: auto;
+  padding: 10px;
+  width: 952px;
+}
+@media (max-width: 981px) {
+  #list-container {
+    margin: auto;
+    width: 600px;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  position: relative;
+}
+ul .list-item {
+  position: relative;
+  width: 550px;
+}
+@media (max-width: 981px) {
+  ul .list-item {
+    width: 100%;
+  }
+}
+
+.title {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 28px;
+  line-height: 0;
+  margin-top: 50px;
+  text-align: center;
+}
+.title a:link {
+  text-decoration: none;
+  color: #AE5A51;
+}
+.title a:hover {
+  text-decoration: underline;
+}
+.title a:visited {
+  color: #AE5A51;
+}
+@media (max-width: 981px) {
+  .title::after {
+    content: url("sm_open_in_new_window.png");
+  }
+}
+
+.descrip {
+  border: solid #dbdbdb 1px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  text-align: left;
+  padding: 10px;
+  position: absolute;
+  right: -361px;
+  top: 105px;
+  width: 350px;
+  background-color: white;
+}
+@media (max-width: 981px) {
+  .descrip {
+    margin: auto;
+    position: static;
+    width: 470px;
+  }
+}
+
+.site-descrip {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+.img:hover {
+  opacity: 0.6;
+}
+
+.below-image {
+  color: gray;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  margin: 0 auto;
+  padding-bottom: 3px;
+}
+
+.btm-text {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 14px;
+  margin-top: 25px;
+}
+
+/*# sourceMappingURL=style-one:css.map */
