@@ -1,10 +1,8 @@
 $(document).ready(function() {
-// "https://spreadsheets.google.com/feeds/list/1U5vwX__V6z0jl2ngkeAgyBfW97vpWs9Oo6rrJ9tD3tY/od6/public/values?alt=json"
 
 function bigList() {
-	var piece1 = "V6z0jl2";
-	$.getJSON("https://spreadsheets.google.com/feeds/list/1U5vwX__" + piece1 + "ngkeAgyBfW97vpWs9Oo6rrJ9tD3tY/od6/public/values?alt=json", function(data) {
-  
+	$.getJSON("https://spreadsheets.google.com/feeds/list/1U5vwX__V6z0jl2ngkeAgyBfW97vpWs9Oo6rrJ9tD3tY/od6/public/values?alt=json", function(data) {
+
 	var entry = data.feed.entry;
 
 	var htmlElements = "";
@@ -16,6 +14,7 @@ function bigList() {
 				htmlElements += "</div>"
 			}
 		$('.container').html(htmlElements);
+		console.log(htmlElements);
 		});
 	}
 
@@ -29,8 +28,8 @@ function list() {
 	var entry = data.feed.entry;
 
 	$("button").click(function() {
-		type_of_plant = $(this).attr("class");
-
+		type_of_plant = $(this).attr("id");
+	
 	var htmlElements = "";
 		for (var i = 0; i < entry.length; i++) {
 			if (entry[i]['gsx$boolean']['$t'] == type_of_plant) {
@@ -42,7 +41,6 @@ function list() {
 	  		} 
 			}
 		$('.container').html(htmlElements).fadeIn("250000");
-		
 			})
 		});
 	}
