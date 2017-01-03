@@ -1,0 +1,318 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,700|Varela);
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+q:before, q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  font-family: "Varela", sans-serif;
+  height: 100%;
+  width: 100%; }
+
+body {
+  height: 100%;
+  width: 100%; }
+
+.first-wrapper {
+  min-height: 100%;
+  position: relative; }
+
+.content {
+  padding-bottom: 30px; }
+
+* {
+  box-sizing: border-box; }
+
+.form-options {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  list-style-type: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center; }
+
+.options-list:first-child {
+  border-left: solid 1px white; }
+
+.options-list {
+  border: none;
+  border-right: solid 1px white;
+  margin-bottom: 11px;
+  padding: 0 10.5px 0 10.5px; }
+
+.option-button {
+  background: #5656AB;
+  border: none;
+  border-radius: 0px;
+  font-size: 1em;
+  width: 100%; }
+
+.option-button:focus {
+  outline-color: transparent;
+  outline-style: none;
+  border-radius: 0px;
+  color: #98EFFF;
+  border-top: solid 2px #98EFFF; }
+
+.top-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  /*height: 100vh;*/ }
+
+.title {
+  color: #98EFFF;
+  font-family: "Quicksand", sans-serif;
+  font-size: 2.8em;
+  padding: 20px 0 24px 0;
+  text-align: center; }
+
+.entries-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0px 3% 35px 3%; }
+
+.form-wrapper {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: rgba(52, 52, 154, 0.83);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 7px; }
+
+.pic-wrapper {
+  -webkit-box-flex: 1.5;
+  -webkit-flex: 1.5;
+  -moz-box-flex: 1.5;
+  -moz-flex: 1.5;
+  -ms-flex: 1.5;
+  flex: 1.5;
+  background: url(../images/beach-sand-blue-ocean.jpg);
+  background-size: cover; }
+  @media (max-width: 700px) {
+    .pic-wrapper {
+      display: none; } }
+
+input {
+  background: transparent;
+  border: 0px;
+  border-bottom: 1px solid white;
+  border-radius: 0px;
+  font-size: 1em;
+  color: white;
+  outline: none;
+  width: 100%;
+  height: 2em;
+  padding: 2px; }
+
+.form-field {
+  margin: 1px;
+  width: 48%; }
+  @media (max-width: 1250px) {
+    .form-field {
+      width: 100%; } }
+
+.half {
+  width: 48%; }
+
+.full {
+  width: 100%; }
+
+.center {
+  text-align: center; }
+
+label {
+  color: white;
+  display: block;
+  font-size: 1em;
+  padding: 12px 5px 5px 2px; }
+
+.button {
+  padding-top: 30px; }
+
+button {
+  background-color: #4D1B61;
+  border: 0;
+  border-radius: 2em;
+  color: white;
+  font-size: 1em;
+  letter-spacing: .1em;
+  padding: 3px;
+  height: 2.5em;
+  width: 80%; }
+
+button:focus {
+  border-radius: 0em; }
+
+.btm-container {
+  background: green;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.card-picture {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 23%;
+  -moz-box-flex: 1;
+  -moz-flex: 1 23%;
+  -ms-flex: 1 23%;
+  flex: 1 23%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  min-height: 35vh; }
+  @media (max-width: 830px) {
+    .card-picture {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1 49%;
+      -moz-box-flex: 1;
+      -moz-flex: 1 49%;
+      -ms-flex: 1 49%;
+      flex: 1 49%;
+      height: 25vh; } }
+  @media (max-width: 500px) {
+    .card-picture {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1 90%;
+      -moz-box-flex: 1;
+      -moz-flex: 1 90%;
+      -ms-flex: 1 90%;
+      flex: 1 90%;
+      height: 25vh; } }
+
+.one {
+  background: url(../images/city.jpg);
+  background-size: cover; }
+
+.two {
+  background: url(../images/purplelake.jpeg);
+  background-size: cover; }
+
+.three {
+  background: url(../images/redroad.jpg);
+  background-size: cover; }
+
+.four {
+  background: url(../images/bench-relax.jpg);
+  background-size: cover; }
+
+.five {
+  background: url(../images/grass-sun.jpg);
+  background-size: cover; }
+
+.six {
+  background: url(../images/houses.jpg);
+  background-size: cover; }
+
+.seven {
+  background: url(../images/lookout.jpg);
+  background-size: cover; }
+
+.eight {
+  background: url(../images/treeroad.jpeg);
+  background-size: cover; }
+
+.card-text {
+  color: white;
+  font-size: 1.5em;
+  letter-spacing: .2em; }
+
+.card-text-price {
+  color: yellow;
+  font-size: 1.5em;
+  letter-spacing: .2em;
+  text-align: center;
+  background: #91877b;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4); }
+
+.footer {
+  background: #9d9d9e;
+  height: 50px;
+  /*overflow: hidden;*/
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%; }
+
+/*# sourceMappingURL=main.css.map */

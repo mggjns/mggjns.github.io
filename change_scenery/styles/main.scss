@@ -1,0 +1,321 @@
+@import "meyer-reset";
+
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,700|Varela);
+
+$title-font: 'Quicksand', sans-serif;
+$main-font: 'Varela', sans-serif;
+
+@mixin flexbox {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+@mixin flex-direction($value: row) {
+	@if $value == row-reverse {
+		-webkit-box-direction: reverse;
+		-webkit-box-orient: horizontal;
+	} @else if $value == column {
+		-webkit-box-direction: normal;
+		-webkit-box-orient: vertical;
+	} @else if $value == column-reverse {
+		-webkit-box-direction: reverse;
+		-webkit-box-orient: vertical;
+	} @else {
+		-webkit-box-direction: normal;
+		-webkit-box-orient: horizontal;
+	}
+	-webkit-flex-direction: $value;
+	-moz-flex-direction: $value;
+	-ms-flex-direction: $value;
+	flex-direction: $value;
+}
+
+@mixin justify-content($value: flex-start) {
+	@if $value == flex-start {
+		-webkit-box-pack: start;
+		-ms-flex-pack: start;
+	} @else if $value == flex-end {
+		-webkit-box-pack: end;
+		-ms-flex-pack: end;
+	} @else if $value == space-between {
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+	} @else if $value == space-around {
+		-ms-flex-pack: distribute;		
+	} @else {
+		-webkit-box-pack: $value;
+		-ms-flex-pack: $value;
+	}
+	-webkit-justify-content: $value;
+	-moz-justify-content: $value;
+	justify-content: $value;
+}
+
+@mixin flex($fg: 1, $fs: null, $fb: null) {
+    
+	// Set a variable to be used by box-flex properties
+	$fg-boxflex: $fg;
+
+	// Box-Flex only supports a flex-grow value so let's grab the
+	// first item in the list and just return that.
+	@if type-of($fg) == 'list' {
+		$fg-boxflex: nth($fg, 1);
+	}
+
+	-webkit-box-flex: $fg-boxflex;
+	-webkit-flex: $fg $fs $fb;
+	-moz-box-flex: $fg-boxflex;
+	-moz-flex: $fg $fs $fb;
+	-ms-flex: $fg $fs $fb;
+	flex: $fg $fs $fb;
+}
+
+@mixin align-items($value: stretch) {
+	@if $value == flex-start {
+		-webkit-box-align: start;
+		-ms-flex-align: start;
+	} @else if $value == flex-end {
+		-webkit-box-align: end;
+		-ms-flex-align: end;
+	} @else {
+		-webkit-box-align: $value;
+		-ms-flex-align: $value;
+	}
+	-webkit-align-items: $value;
+	-moz-align-items: $value;
+	align-items: $value;
+}
+
+@mixin flex-wrap($value: nowrap) {
+	// No Webkit Box fallback.
+	-webkit-flex-wrap: $value;
+	-moz-flex-wrap: $value;
+	@if $value == nowrap {
+		-ms-flex-wrap: none;
+	} @else { 
+		-ms-flex-wrap: $value; 
+	}
+	flex-wrap: $value;
+}
+
+//reset above
+
+html {
+	font-family: $main-font;
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+}
+
+.first-wrapper {
+	min-height: 100%;
+	position: relative;
+}
+.content {
+	padding-bottom: 30px;
+}
+
+* {
+  box-sizing : border-box;
+}
+.form-options {
+	@include flexbox;
+  width: 100%;
+  list-style-type: none;
+	@include justify-content($value: center);
+}
+.options-list:first-child {
+	border-left: solid 1px white;
+}
+.options-list {
+  border: none;
+  border-right: solid 1px white;
+  margin-bottom: 11px;
+  padding: 0 10.5px 0 10.5px;
+}
+.option-button {
+  background: #5656AB;
+  border: none;
+  border-radius: 0px;
+  font-size: 1em;
+  width: 100%;
+}
+.option-button:focus {
+  outline-color: transparent;
+  outline-style: none;
+  border-radius: 0px;
+  color: #98EFFF;
+  border-top: solid 2px #98EFFF;
+}
+.top-container {
+	@include flexbox;
+	/*height: 100vh;*/
+}
+
+.title {
+	color: #98EFFF;
+	font-family: $title-font;
+	font-size: 2.8em;
+	padding: 20px 0 24px 0;
+	text-align: center;
+}
+.entries-wrapper {
+	@include flexbox;
+	box-sizing: border-box;
+	@include flex;
+  @include flexbox;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0px 3% 35px 3%
+}
+.form-wrapper {
+	@include flex;
+  background: rgba(52, 52, 154, 0.83);
+  @include flexbox;
+  @include flex-wrap($value: wrap);
+  padding: 7px;
+}
+
+.pic-wrapper {
+	@include flex($fg: 1.5);
+	background: url(../images/beach-sand-blue-ocean.jpg);
+	background-size: cover;
+		@media (max-width: 700px) {
+		display: none;
+		}
+}
+
+input {
+    background: transparent;
+    border: 0px;
+    border-bottom: 1px solid white;
+    border-radius: 0px;
+    font-size: 1em;
+    color: white;
+    outline: none;
+    width: 100%;
+    height: 2em;
+    padding: 2px;
+}
+
+.form-field {
+	margin: 1px;
+  width: 48%;
+  @media (max-width: 1250px) {
+  	width: 100%;
+  }
+}
+.half {
+	width: 48%;
+}
+.full {
+	width: 100%;
+}
+.center {
+  text-align: center;
+}
+label {
+	color: white;
+	display: block;
+	font-size: 1em;
+	padding: 12px 5px 5px 2px;
+}
+.button {
+	padding-top: 30px;
+}
+button {
+	background-color: #4D1B61;
+	border: 0;
+	border-radius: 2em;
+	color: white;
+	font-size: 1em;
+	letter-spacing: .1em;
+  	padding: 3px;
+  	height: 2.5em;
+  	width: 80%;
+}
+button:focus {
+	border-radius: 0em;
+}
+.btm-container {
+	background: green;
+	@include flexbox;
+	@include flex-wrap($value: wrap);
+}
+.card-picture {
+	@include flex($fg: 1 23%);
+	@include flexbox;
+	@include align-items($value: center);
+	@include justify-content($value: center);
+	min-height: 35vh;
+		@media (max-width: 830px) {
+			@include flex($fg: 1 49%);
+			height: 25vh;
+		}
+		@media (max-width: 500px) {
+			@include flex($fg: 1 90%);
+			height: 25vh;
+		}	
+}
+
+.one {
+	background: url(../images/city.jpg);
+	background-size: cover;
+}
+.two {
+	background: url(../images/purplelake.jpeg);
+	background-size: cover;
+}
+.three {
+	background: url(../images/redroad.jpg);
+	background-size: cover;
+}
+.four {
+	background: url(../images/bench-relax.jpg);
+	background-size: cover;
+}
+.five {
+	background: url(../images/grass-sun.jpg);
+	background-size: cover;
+}
+.six {
+	background: url(../images/houses.jpg);
+	background-size: cover;
+}
+.seven {
+	background: url(../images/lookout.jpg);
+	background-size: cover;
+}
+.eight {
+	background: url(../images/treeroad.jpeg);
+	background-size: cover;
+}
+.card-text {
+	color: white;
+	font-size: 1.5em;
+	letter-spacing: .2em;
+}
+.card-text-price {
+	color: yellow;
+	font-size: 1.5em;
+	letter-spacing: .2em;
+	text-align: center;
+  	background: #91877b;
+  	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+.footer {
+	background: rgb(157, 157, 158);
+	height: 50px;
+	/*overflow: hidden;*/
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
