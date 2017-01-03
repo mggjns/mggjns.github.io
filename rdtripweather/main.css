@@ -1,0 +1,119 @@
+/* meyer reset */
+html,body,div,span,applet,object,iframe,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,label,legend,p,blockquote,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}body{line-height:1;color:black;background:white;}:focus{outline:0;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}ol,ul{list-style:none;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}blockquote:before,blockquote:after,q:before,q:after{content:"";}blockquote,q{quotes:"" "";}abbr,acronym{border:0;}
+
+      html, body {
+        clear: both;
+        font-family: 'Roboto', sans-serif;
+        height: 100%;
+        margin: 0px;
+        overflow: auto;
+        padding: 0px;
+      }
+
+      #panel {
+        background-color: white;
+        border-radius: 5px;
+        border: 1px solid #999;
+        font-family: 'Roboto', sans-serif;
+        font-size: 13px;
+        left: 10px;
+        padding: 5px;
+        position: absolute;
+        text-align: center;
+        top: 6%;
+        width: 350px;
+      }
+
+      #title {
+        color: #0000CC;
+        font-size: 16px;
+        padding: 3px;
+      }
+
+      .numb {
+        background-color: #75B1FF;
+        border-radius: 5px;
+        border: 1px solid white;
+        font-size: 14px;
+        padding: 4px 7px 3px 11px;
+      }
+
+      #button {
+        bottom: 2px;
+        padding: 12px;
+        position: absolute;
+        right: 2px;
+        text-align: center;
+        width: 100%;
+      }
+
+      #redo {
+        padding: 12px;
+        text-align: center;
+      }
+
+      #weather {
+        display: none;
+      }
+
+      #weather_here {
+        background-color: yellow;
+        left: 9px;
+        position: absolute;
+        top: 2%;
+        width: 500px;
+    }
+
+      #weather_here div {
+        background-color: white;
+        border-bottom: 1.5px dotted gray;
+        float: left;
+        font-family: 'Roboto', sans-serif;
+        font-size: 10pt;
+        line-height: 14.5px;
+        padding: 15px 10px;
+        position: relative;
+        vertical-align: middle;
+        width: 100%;
+      }
+
+      .locale {
+        background-color: #4E6329;
+        border-radius: 5px;
+        border: 1px solid #4E6329;;
+        color: white;
+        margin-bottom: 4px;
+        padding: 3px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        letter-spacing: 0.0625em;  
+      }
+
+      .temp {
+      	font-size: 16px;
+      	padding-top: 5px;
+      }
+
+      .title {
+      	font-size: 15px;
+      }
+
+      #top_line {
+      	text-align: center;
+      }
+
+      .feels_like {
+      	font-size: 11px;
+      }
+
+      #map-canvas {
+        display: block;
+        min-height: 100%;
+        overflow: auto;
+        width: 100%;
+      }
+
+      #directions_panel {
+        display: none;
+      }
+

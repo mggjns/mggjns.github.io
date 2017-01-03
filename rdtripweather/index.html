@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> MapPointWeather </title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+    	<!-- map -->
+    	<div id="map-canvas"></div>    	
+    	<section id="panel">
+        <p id="title"> MapPoint Weather </p>
+   			<p>Click a location on the map and get the weather report.  <br> <br>
+   			Check the forecast for a road trip or see the temperature for any place around the world. </p>    	
+    	</section>
+    	<!-- weather -->
+    	<article id="weather_here"></article>
+    	<!-- bottom clear all -->
+    	<section id="button">
+ 			  <input type="button" value="clear all points and weather" id="redo">
+ 		  </section>    
+</body>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhIvSEZdpFq2ITFpvxNw4gvOifaAkJrPM&sensor=false">
+  </script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+  <script type="text/javascript" src="rdweather.js"></script> 
+</html>
