@@ -1,0 +1,231 @@
+/************  meyer reset  ************/
+html,body,div,span,applet,object,iframe,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,label,legend,p,blockquote,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}body{line-height:1;color:black;background:white;}:focus{outline:0;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}ol,ul{list-style:none;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}blockquote:before,blockquote:after,q:before,q:after{content:"";}blockquote,q{quotes:"" "";}abbr,acronym{border:0;}
+
+
+html {
+	background-color: black;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+}
+
+header {
+	font-size: 2em;
+	margin: 25px 0 10px 10px;
+}
+
+#directions {
+	margin: 22px;
+}
+
+#container {
+	background-color: black;
+	color: green;
+	font-family: 'Press Start 2P', cursive;
+	height: 100%;
+	padding: 1px;
+	width: 100%;
+}
+
+#option {
+	height: 35px;
+	margin: 10px;
+	padding-left: 5px;
+	width: 300px;
+}
+
+#submit {
+	margin-left: 5px;
+}
+
+#machine_choice {
+	color: red;
+	font-size: 30px;
+	margin-top: 100px;
+	text-align: center;
+	width: 100%;
+}
+
+.choice {
+	padding: 7px;
+}
+
+#decision, 
+#reset {
+	display: none;
+	font-family: 'Press Start 2P', cursive;
+	font-size: 17px;
+}
+
+#decision {
+	margin-top: 25px;
+	padding: 5px;
+}
+
+#reset {
+	margin-left: 10px;
+}
+
+
+/*  animation  citation: 
+
+==============================================
+stretchRight
+==============================================
+
+==============================================
+CSS3 ANIMATION CHEAT SHEET
+==============================================
+
+Made by Justin Aguilar
+
+www.justinaguilar.com/animations/
+
+Questions, comments, concerns, love letters:
+justin@justinaguilar.com
+==============================================
+*/
+
+.stretchRight{
+	animation-name: stretchRight;
+	-webkit-animation-name: stretchRight;	
+
+	animation-duration: 1.5s;	
+	-webkit-animation-duration: 1.5s;
+
+	animation-timing-function: steps(4, end);	
+	-webkit-animation-timing-function: steps(4, end);	
+
+	transform-origin: 0% 0%;
+	-ms-transform-origin: 0% 0%;
+	-webkit-transform-origin: 0% 0%; 		
+}
+
+@keyframes stretchRight {
+	0% {
+		transform: scaleX(0.15);
+	}
+	20% {
+		transform: scaleX(.30);
+	}
+	40% {
+		transform: scaleX(0.58);
+	}
+	80% {
+		transform: scaleX(0.7);
+	}
+	100% {
+		transform: scaleX(1.0);
+	}				
+	/*80% {
+		transform: scaleX(1.01);
+	}
+	100% {
+		transform: scaleX(1);
+	}*/							
+}
+
+@-webkit-keyframes stretchRight {
+	0% {
+		-webkit-transform: scaleX(0.3);
+	}
+	40% {
+		-webkit-transform: scaleX(0.5);
+	}
+	60% {
+		-webkit-transform: scaleX(0.98);
+	}
+	80% {
+		-webkit-transform: scaleX(1.0);
+	}
+	100% {
+		-webkit-transform: scaleX(1.0);
+	}				
+	/*80% {
+		-webkit-transform: scaleX(1.01);
+	}
+	100% {
+		-webkit-transform: scaleX(1);
+	}*/		
+}
+
+/*
+==============================================
+slideDown
+==============================================
+*/
+
+
+.slideDown{
+	animation-name: slideDown;
+	-webkit-animation-name: slideDown;	
+
+	animation-duration: 2s;	
+	-webkit-animation-duration: 2s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;	
+
+	visibility: visible !important;						
+}
+
+@keyframes slideDown {
+	0% {
+		transform: translateY(-100%);
+	}
+	50%{
+		transform: translateY(8%);
+	}
+	65%{
+		transform: translateY(-4%);
+	}
+	80%{
+		transform: translateY(4%);
+	}
+	95%{
+		transform: translateY(-2%);
+	}			
+	100% {
+		transform: translateY(0%);
+	}		
+}
+
+@-webkit-keyframes slideDown {
+	0% {
+		-webkit-transform: translateY(-100%);
+	}
+	50%{
+		-webkit-transform: translateY(8%);
+	}
+	65%{
+		-webkit-transform: translateY(-4%);
+	}
+	80%{
+		-webkit-transform: translateY(4%);
+	}
+	95%{
+		-webkit-transform: translateY(-2%);
+	}			
+	100% {
+		-webkit-transform: translateY(0%);
+	}	
+}
+
+@media (max-width: 325px) {
+	
+	header {
+		font-size: 1.5em;
+	}
+	.option {
+		/*width: 10%;*/
+	}
+	#directions {
+		padding: 7px;
+	}
+	/*button {
+		font-size: 10px;
+		margin: auto;
+		padding: 10px;
+	*/
+}

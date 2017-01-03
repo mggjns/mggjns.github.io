@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta name="viewport" content="width=device-width; initial-scale=1.0;">
+	<link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+  	<link rel="stylesheet" type="text/css" href="new_css.css">
+  <title> Decision Maker </title>
+  </head>
+  <body>
+	<div id="container">
+      <header>
+		<h1>
+          The Machine Will Decide.
+      	</h1>
+      </header>
+
+      <p id="directions">
+        Enter the options. 
+      </p>
+
+      <form>
+		<input type="textarea" value="" id="option">
+      	<input type="submit" id="submit" value="+">
+      	<button id="reset"> do over </button>
+      </form>
+      
+      <div id="all_options">
+        <br> 
+      </div>
+      
+      <button id="decision">
+        Decision 
+      </button>
+      
+      <div class="slideDown" id="machine_choice">
+        
+      </div>
+      
+  </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script type="text/javascript" src="new_decision.js">
+  </script>
+</html>
